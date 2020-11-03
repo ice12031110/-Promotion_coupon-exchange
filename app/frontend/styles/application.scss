@@ -1,0 +1,37 @@
+nav {
+    .user-button {
+      @apply .px-2 .py-2 .bg-gray-500 .rounded-md .text-sm;
+      &:hover {
+        @apply .bg-blue-200;
+      }
+    }
+  }
+  .field {
+    .label {
+      @apply .block .font-thin;
+    }
+    .input {
+      @apply .px-3 .py-2 .mb-3 .text-lg .border .border-gray-400 .rounded-md;
+      &:focus {
+        @apply .outline-none;
+      }
+    }
+  }
+  .main-button {
+    @apply.bg-gray-600 .px-3 .py-2 .rounded-md .text-white .font-thin;
+  }
+  
+  .secondary-button {
+    @apply .bg-blue-100 .px-3 .py-2 .rounded-md .text-black .font-thin;
+  }
+  
+  .red-button {
+    @apply .bg-red-400 .px-3 .py-2 .rounded-md .text-white .text-sm .font-thin;
+  }
+  
+  .section-center {
+    @apply .px-4 .py-2 .text-center;
+    .h2-type {
+      @apply .text-2xl .font-thin .mb-2;
+    }
+ }
