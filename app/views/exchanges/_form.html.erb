@@ -1,0 +1,33 @@
+<ul>
+  <% if exchange.errors.any? %>
+    <% exchange.errors.messages.each do |message| %>
+      <li>
+        <%= message %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= form_for(exchange) do |f| %>
+
+<div>
+  <%= f.label :company_name, "公司名稱" %>
+  <%= f.text_field :company_name %>
+</div>
+<div>
+  <%= f.label :company_number, "公司統編" %>
+  <%= f.text_field :company_number %>
+</div>
+<div>
+  <%= f.label :phone_number, "聯絡電話" %>
+  <%= f.text_field :phone_number %>
+</div>
+
+<div>
+  <%= f.submit "兌換" %>
+</div>
+
+<% end %>
+
+
+
