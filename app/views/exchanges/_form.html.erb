@@ -1,6 +1,6 @@
 <ul>
   <% if exchange.errors.any? %>
-    <% exchange.errors.messages.each do |message| %>
+    <% exchange.errors.full_messages.each do |message| %>
       <li>
         <%= message %>
       </li>
