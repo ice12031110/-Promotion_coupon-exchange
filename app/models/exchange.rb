@@ -4,9 +4,12 @@ class Exchange < ApplicationRecord
   validates :company_number, presence: true, numericality: { only_integer: true }
   validates_length_of :company_number, :is => 8
   has_one :coupon
-  validate :company_number_check
+  validates :company_number_check, presence: true
 
   def company_number_check
+    #參考龍哥的驗證gitHub:https://gist.github.com/kaochenlong/1889703
+    at_least_8_digits =  /^\d{8}$/
+    return false unless at_least_8_digits.match(company_number.to_s)
     result = []
     serial_array = company_number.to_s.split('')
     num_array = [1, 2, 1, 2, 1, 2, 4, 1]
@@ -15,9 +18,7 @@ class Exchange < ApplicationRecord
     result.each { |elm| 
     sum += elm.divmod(10).inject { |s, i| s + i }
     }
-    return true if (sum % 10 == 0) or (sum % 9 == 9 and serial[5] == 7)
+    return true if (sum % 10 == 0) or ((sum + 1) % 10 == 0 and company_number.to_s.split('')[6] == "7")
   end
-
-  
 
 end
