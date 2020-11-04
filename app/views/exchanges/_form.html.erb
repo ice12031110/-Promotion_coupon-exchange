@@ -10,21 +10,21 @@
 
 <%= form_for(exchange) do |f| %>
 
-<div>
+<div class="form-item">
   <%= f.label :company_name, "公司名稱" %>
-  <%= f.text_field :company_name %>
+  <%= f.text_field :company_name, autocomplete: "off" %>
 </div>
-<div>
+<div class="form-item">
   <%= f.label :company_number, "公司統編" %>
-  <%= f.text_field :company_number %>
+  <%= f.text_field :company_number, autocomplete: "off" %>
 </div>
-<div>
+<div class="form-item"> 
   <%= f.label :phone_number, "聯絡電話" %>
-  <%= f.text_field :phone_number %>
+  <%= f.text_field :phone_number, autocomplete: "off" %>
 </div>
 
-<div>
-  <%= f.submit "兌換" %>
+<div class="form-item">
+  <%= f.button "兌換" %>
 </div>
 
 <% end %>
