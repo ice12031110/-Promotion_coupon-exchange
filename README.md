@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+五倍面試題
 
-Things you may want to cover:
+實作Coupon兌換網站
 
-* Ruby version
+使用工具 
+Ruby on Rails
+Tailwind
+Scss
+Fontawesome
+PostgreSQL 
+Rspec測試
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![](https://i.imgur.com/YuyrTHv.png)
