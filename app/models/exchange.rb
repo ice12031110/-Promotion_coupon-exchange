@@ -1,4 +1,5 @@
 class Exchange < ApplicationRecord
+  belongs_to :user
   validates :company_name, :company_number, :phone_number, presence: true
   validates_uniqueness_of :company_number
   validates :company_number, presence: true, numericality: { only_integer: true }

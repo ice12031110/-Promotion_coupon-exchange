@@ -18,7 +18,20 @@
       </div>
 
       <div class="coupon-detail">
-        
+        <div class="coupon-title">
+        	<h2>已兌換序號列表</h2>
+        </div>
+        <% @exchanges.each do |exchange| %>
+            <div class="context">
+              <div class="company-name">
+                <%= exchange.company_name %>
+              </div>
+              <div class="serial-number">
+                <span>序號:</span>
+                <%= exchange.coupon.serial_number %>
+              </div>
+            </div>
+        <% end %>
       </div>
     </div>
   </div>
