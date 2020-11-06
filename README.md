@@ -1,6 +1,5 @@
 # README
 
-五倍面試題
 
 實作Coupon兌換網站
 
